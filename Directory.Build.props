@@ -1,0 +1,9 @@
+<Project>
+  <!-- Repo-wide MSBuild defaults (auto-imported by every project under backend/) -->
+  <PropertyGroup>
+    <!-- NU1903 = NuGet audit advisory for a transitive EF Tooling dependency
+         (System.Security.Cryptography.Xml 9.0.0). Advisory only, no build impact.
+         Suppressed so real errors stay visible in VS / PM Console / CLI. -->
+    <NoWarn>$(NoWarn);NU1903</NoWarn>
+  </PropertyGroup>
+</Project>

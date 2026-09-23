@@ -1,0 +1,132 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="migrations.md" />
+  </Folder>
+  <Folder Name="/BuildingBlocks/" />
+  <Folder Name="/BuildingBlocks/Application/">
+    <Project Path="BuildingBlocks/Application/BuildingBlocks.Application.csproj" />
+  </Folder>
+  <Folder Name="/BuildingBlocks/Domain/">
+    <Project Path="BuildingBlocks/Domain/BuildingBlocks.Domain.csproj" />
+  </Folder>
+  <Folder Name="/BuildingBlocks/Infrastructure/">
+    <Project Path="BuildingBlocks/Infrastructure/BuildingBlocks.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/BuildingBlocks/Web/">
+    <Project Path="BuildingBlocks/Web/BuildingBlocks.Web.csproj" />
+  </Folder>
+  <Folder Name="/services/" />
+  <Folder Name="/services/Catalog/">
+    <Project Path="services/Catalog/Catalog.API/Catalog.API.csproj" />
+    <Project Path="services/Catalog/Catalog.Application/Catalog.Application.csproj" />
+    <Project Path="services/Catalog/Catalog.Contracts/Catalog.Contracts.csproj" />
+    <Project Path="services/Catalog/Catalog.Domain/Catalog.Domain.csproj" />
+    <Project Path="services/Catalog/Catalog.Infrastructure/Catalog.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/services/Catalog/tests/">
+    <Project Path="services/Catalog/tests/Catalog.Tests/Catalog.Tests.csproj" />
+  </Folder>
+  <Folder Name="/services/Customer/">
+    <Project Path="services/Customer/Customer.API/Customer.API.csproj" />
+    <Project Path="services/Customer/Customer.Application/Customer.Application.csproj" />
+    <Project Path="services/Customer/Customer.Contracts/Customer.Contracts.csproj" />
+    <Project Path="services/Customer/Customer.Domain/Customer.Domain.csproj" />
+    <Project Path="services/Customer/Customer.Infrastructure/Customer.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/services/Customer/tests/">
+    <Project Path="services/Customer/tests/Customer.Tests/Customer.Tests.csproj" />
+  </Folder>
+  <Folder Name="/services/Fulfillment/">
+    <Project Path="services/Fulfillment/Fulfillment.API/Fulfillment.API.csproj" />
+    <Project Path="services/Fulfillment/Fulfillment.Application/Fulfillment.Application.csproj" />
+    <Project Path="services/Fulfillment/Fulfillment.Contracts/Fulfillment.Contracts.csproj" />
+    <Project Path="services/Fulfillment/Fulfillment.Domain/Fulfillment.Domain.csproj" />
+    <Project Path="services/Fulfillment/Fulfillment.Infrastructure/Fulfillment.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/services/Fulfillment/tests/">
+    <Project Path="services/Fulfillment/tests/Fulfillment.Tests/Fulfillment.Tests.csproj" />
+  </Folder>
+  <Folder Name="/services/Gateway/">
+    <Project Path="services/Gateway/Gateway.API/Gateway.API.csproj" />
+  </Folder>
+  <Folder Name="/services/Identity/">
+    <Project Path="services/Identity/Identity.API/Identity.API.csproj" />
+    <Project Path="services/Identity/Identity.Application/Identity.Application.csproj" />
+    <Project Path="services/Identity/Identity.Contracts/Identity.Contracts.csproj" />
+    <Project Path="services/Identity/Identity.Domain/Identity.Domain.csproj" />
+    <Project Path="services/Identity/Identity.Infrastructure/Identity.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/services/Identity/tests/">
+    <Project Path="services/Identity/tests/Identity.Tests/Identity.Tests.csproj" />
+  </Folder>
+  <Folder Name="/services/Inventory/">
+    <Project Path="services/Inventory/Inventory.API/Inventory.API.csproj" />
+    <Project Path="services/Inventory/Inventory.Application/Inventory.Application.csproj" />
+    <Project Path="services/Inventory/Inventory.Contracts/Inventory.Contracts.csproj" />
+    <Project Path="services/Inventory/Inventory.Domain/Inventory.Domain.csproj" />
+    <Project Path="services/Inventory/Inventory.Infrastructure/Inventory.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/services/Inventory/tests/">
+    <Project Path="services/Inventory/tests/Inventory.Tests/Inventory.Tests.csproj" />
+  </Folder>
+  <Folder Name="/services/Notification/">
+    <Project Path="services/Notification/Notification.API/Notification.API.csproj" />
+    <Project Path="services/Notification/Notification.Application/Notification.Application.csproj" />
+    <Project Path="services/Notification/Notification.Contracts/Notification.Contracts.csproj" />
+    <Project Path="services/Notification/Notification.Domain/Notification.Domain.csproj" />
+    <Project Path="services/Notification/Notification.Infrastructure/Notification.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/services/Notification/tests/">
+    <Project Path="services/Notification/tests/Notification.Tests/Notification.Tests.csproj" />
+  </Folder>
+  <Folder Name="/services/Ordering/">
+    <Project Path="services/Ordering/Ordering.API/Ordering.API.csproj" />
+    <Project Path="services/Ordering/Ordering.Application/Ordering.Application.csproj" />
+    <Project Path="services/Ordering/Ordering.Contracts/Ordering.Contracts.csproj" />
+    <Project Path="services/Ordering/Ordering.Domain/Ordering.Domain.csproj" />
+    <Project Path="services/Ordering/Ordering.Infrastructure/Ordering.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/services/Ordering/tests/">
+    <Project Path="services/Ordering/tests/Ordering.Tests/Ordering.Tests.csproj" />
+  </Folder>
+  <Folder Name="/services/Payment/">
+    <Project Path="services/Payment/Payment.API/Payment.API.csproj" />
+    <Project Path="services/Payment/Payment.Application/Payment.Application.csproj" />
+    <Project Path="services/Payment/Payment.Contracts/Payment.Contracts.csproj" />
+    <Project Path="services/Payment/Payment.Domain/Payment.Domain.csproj" />
+    <Project Path="services/Payment/Payment.Infrastructure/Payment.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/services/Payment/tests/">
+    <Project Path="services/Payment/tests/Payment.Tests/Payment.Tests.csproj" />
+  </Folder>
+  <Folder Name="/services/Procurement/">
+    <Project Path="services/Procurement/Procurement.API/Procurement.API.csproj" />
+    <Project Path="services/Procurement/Procurement.Application/Procurement.Application.csproj" />
+    <Project Path="services/Procurement/Procurement.Contracts/Procurement.Contracts.csproj" />
+    <Project Path="services/Procurement/Procurement.Domain/Procurement.Domain.csproj" />
+    <Project Path="services/Procurement/Procurement.Infrastructure/Procurement.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/services/Procurement/tests/">
+    <Project Path="services/Procurement/tests/Procurement.Tests/Procurement.Tests.csproj" />
+  </Folder>
+  <Folder Name="/services/Reporting/">
+    <Project Path="services/Reporting/Reporting.API/Reporting.API.csproj" />
+    <Project Path="services/Reporting/Reporting.Application/Reporting.Application.csproj" />
+    <Project Path="services/Reporting/Reporting.Contracts/Reporting.Contracts.csproj" />
+    <Project Path="services/Reporting/Reporting.Domain/Reporting.Domain.csproj" />
+    <Project Path="services/Reporting/Reporting.Infrastructure/Reporting.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/services/Reporting/tests/">
+    <Project Path="services/Reporting/tests/Reporting.Tests/Reporting.Tests.csproj" />
+  </Folder>
+  <Folder Name="/services/Returns/">
+    <Project Path="services/Returns/Returns.API/Returns.API.csproj" />
+    <Project Path="services/Returns/Returns.Application/Returns.Application.csproj" />
+    <Project Path="services/Returns/Returns.Contracts/Returns.Contracts.csproj" />
+    <Project Path="services/Returns/Returns.Domain/Returns.Domain.csproj" />
+    <Project Path="services/Returns/Returns.Infrastructure/Returns.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/services/Returns/tests/">
+    <Project Path="services/Returns/tests/Returns.Tests/Returns.Tests.csproj" />
+  </Folder>
+</Solution>

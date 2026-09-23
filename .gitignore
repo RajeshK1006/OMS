@@ -1,0 +1,57 @@
+# ============ Build outputs ============
+[Bb]in/
+[Oo]bj/
+[Oo]ut/
+[Ll]og/
+*.user
+*.suo
+.vs/
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+
+# ============ NuGet ============
+*.nupkg
+*.snupkg
+.nuget/packages/
+!**/packages/build/
+project.lock.json
+project.fragment.lock.json
+
+# ============ .NET tooling ============
+.dotnet/
+.vscode/
+.idea/
+*.swp
+*~
+
+# ============ Secrets — NEVER commit these ============
+# Environment-specific overrides (real servers, passwords, keys).
+# Base appsettings.json + appsettings.Development.json stay tracked:
+# they contain only localhost + Windows-auth (Trusted_Connection) defaults.
+appsettings.Production.json
+appsettings.Staging.json
+appsettings.UAT.json
+appsettings.Local.json
+secrets.json
+appsettings.*.secrets.json
+.env
+.env.*
+*.pfx
+*.p12
+*.key
+*.pem
+azurekeyvault.json
+
+
+
+# ============ OS / sync noise ============
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.lnk
+
+# ============ Kept intentionally ============
+# backend/**/Migrations/**  (timestamped migrations + Scripts/*.sql are release artifacts)
+# backend/migrations.md, backend/Directory.Build.props, backend/OMS.slnx
