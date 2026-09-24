@@ -1,6 +1,6 @@
 namespace BuildingBlocks.Infrastructure.Outbox;
 
-public sealed class OutboxMessage
+public class OutboxMessage
 {
     public Guid Id { get; set; } = Guid.NewGuid();
     public string Type { get; set; } = default!;
@@ -9,3 +9,4 @@ public sealed class OutboxMessage
     public DateTime? ProcessedAtUtc { get; set; }
     public int RetryCount { get; set; }
 }
+

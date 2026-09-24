@@ -1,10 +1,10 @@
 namespace Gateway.API.Configuration;
 
-public sealed class GatewayOptions
+public class GatewayOptions
 {
     public Dictionary<string, ServiceRoute> Services { get; set; } = new(StringComparer.OrdinalIgnoreCase);
 
-    public sealed class ServiceRoute
+    public class ServiceRoute
     {
         public string BaseUrl { get; set; } = default!;
 
@@ -16,3 +16,4 @@ public sealed class GatewayOptions
         public Dictionary<string, string> Paths { get; set; } = new(StringComparer.OrdinalIgnoreCase);
     }
 }
+

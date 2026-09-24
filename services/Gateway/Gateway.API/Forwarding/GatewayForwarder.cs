@@ -4,7 +4,7 @@ using Microsoft.Extensions.Options;
 
 namespace Gateway.API.Forwarding;
 
-public sealed class GatewayForwarder(IHttpClientFactory factory, IOptions<GatewayOptions> options)
+public class GatewayForwarder(IHttpClientFactory factory, IOptions<GatewayOptions> options)
 {
     public async Task ForwardAsync(
         HttpContext context,
@@ -53,3 +53,4 @@ public sealed class GatewayForwarder(IHttpClientFactory factory, IOptions<Gatewa
         await response.Content.CopyToAsync(context.Response.Body, ct);
     }
 }
+

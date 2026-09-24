@@ -4,7 +4,7 @@ using Ordering.Domain.Orders;
 
 namespace Ordering.Infrastructure.Persistence.Configurations;
 
-public sealed class OrderItemConfiguration : IEntityTypeConfiguration<OrderItem>
+public class OrderItemConfiguration : IEntityTypeConfiguration<OrderItem>
 {
     public void Configure(EntityTypeBuilder<OrderItem> b)
     {
@@ -19,3 +19,4 @@ public sealed class OrderItemConfiguration : IEntityTypeConfiguration<OrderItem>
         b.HasIndex("OrderId");
     }
 }
+

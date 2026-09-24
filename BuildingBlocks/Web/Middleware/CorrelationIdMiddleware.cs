@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Http;
 
 namespace BuildingBlocks.Web.Middleware;
 
-public sealed class CorrelationIdMiddleware(RequestDelegate next)
+public class CorrelationIdMiddleware(RequestDelegate next)
 {
     public const string Header = "X-Correlation-Id";
 
@@ -15,3 +15,4 @@ public sealed class CorrelationIdMiddleware(RequestDelegate next)
         await next(ctx);
     }
 }
+

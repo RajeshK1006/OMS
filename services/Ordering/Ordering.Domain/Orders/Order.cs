@@ -3,7 +3,7 @@ using Ordering.Domain.Orders.Events;
 
 namespace Ordering.Domain.Orders;
 
-public sealed class Order : AggregateRoot
+public class Order : AggregateRoot
 {
     private readonly List<OrderItem> _items = new();
     private Order() { } // EF
@@ -39,3 +39,4 @@ public sealed class Order : AggregateRoot
         return order;
     }
 }
+

@@ -10,7 +10,7 @@ public interface ICommandDispatcher
         where TCommand : ICommand<TResponse>;
 }
 
-public sealed class CommandDispatcher(IServiceProvider provider) : ICommandDispatcher
+public class CommandDispatcher(IServiceProvider provider) : ICommandDispatcher
 {
     public async Task<TResponse> SendAsync<TCommand, TResponse>(TCommand command, CancellationToken ct = default)
         where TCommand : ICommand<TResponse>
@@ -28,3 +28,4 @@ public sealed class CommandDispatcher(IServiceProvider provider) : ICommandDispa
         return await next();
     }
 }
+

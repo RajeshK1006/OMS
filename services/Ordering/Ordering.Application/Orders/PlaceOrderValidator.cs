@@ -2,7 +2,7 @@ using BuildingBlocks.Application.Pipeline;
 
 namespace Ordering.Application.Orders;
 
-public sealed class PlaceOrderValidator : IValidator<PlaceOrderCommand>
+public class PlaceOrderValidator : IValidator<PlaceOrderCommand>
 {
     public Task<IReadOnlyList<string>> ValidateAsync(PlaceOrderCommand cmd, CancellationToken ct = default)
     {
@@ -18,3 +18,4 @@ public sealed class PlaceOrderValidator : IValidator<PlaceOrderCommand>
         return Task.FromResult<IReadOnlyList<string>>(errors);
     }
 }
+

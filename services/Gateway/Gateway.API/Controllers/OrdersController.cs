@@ -9,7 +9,7 @@ namespace Gateway.API.Controllers;
 /// </summary>
 [ApiController]
 [Route("api/orders")]
-public sealed class OrdersController(GatewayForwarder forward) : ControllerBase
+public class OrdersController(GatewayForwarder forward) : ControllerBase
 {
     [HttpPost]
     public Task Place(CancellationToken ct)
@@ -24,3 +24,4 @@ public sealed class OrdersController(GatewayForwarder forward) : ControllerBase
     public Task List(CancellationToken ct)
         => forward.ForwardAsync(HttpContext, "Ordering", "Orders", ct: ct);
 }
+

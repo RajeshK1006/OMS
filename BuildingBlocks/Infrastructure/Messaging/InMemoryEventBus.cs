@@ -3,7 +3,7 @@ using Microsoft.Extensions.Logging;
 
 namespace BuildingBlocks.Infrastructure.Messaging;
 
-public sealed class InMemoryEventBus(ILogger<InMemoryEventBus> logger) : IEventBus
+public class InMemoryEventBus(ILogger<InMemoryEventBus> logger) : IEventBus
 {
     public Task PublishAsync<T>(T @event, CancellationToken ct = default) where T : IIntegrationEvent
     {
@@ -11,3 +11,4 @@ public sealed class InMemoryEventBus(ILogger<InMemoryEventBus> logger) : IEventB
         return Task.CompletedTask;
     }
 }
+

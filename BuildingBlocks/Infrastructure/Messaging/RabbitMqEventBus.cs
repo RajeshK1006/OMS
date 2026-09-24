@@ -7,7 +7,7 @@ using RabbitMQ.Client;
 
 namespace BuildingBlocks.Infrastructure.Messaging;
 
-public sealed class RabbitMqEventBus(IOptions<RabbitMqOptions> options, ILogger<RabbitMqEventBus> logger) : IEventBus, IAsyncDisposable
+public class RabbitMqEventBus(IOptions<RabbitMqOptions> options, ILogger<RabbitMqEventBus> logger) : IEventBus, IAsyncDisposable
 {
     private IConnection? _connection;
     private IChannel? _channel;
@@ -50,3 +50,4 @@ public sealed class RabbitMqEventBus(IOptions<RabbitMqOptions> options, ILogger<
         _lock.Dispose();
     }
 }
+

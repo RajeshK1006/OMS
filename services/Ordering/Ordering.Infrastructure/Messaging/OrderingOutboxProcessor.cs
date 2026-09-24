@@ -11,7 +11,7 @@ using Ordering.Infrastructure.Persistence;
 
 namespace Ordering.Infrastructure.Messaging;
 
-public sealed class OrderingOutboxProcessor(IServiceProvider provider, ILogger<OrderingOutboxProcessor> logger) : BackgroundService
+public class OrderingOutboxProcessor(IServiceProvider provider, ILogger<OrderingOutboxProcessor> logger) : BackgroundService
 {
     protected override async Task ExecuteAsync(CancellationToken ct)
     {
@@ -53,3 +53,4 @@ public sealed class OrderingOutboxProcessor(IServiceProvider provider, ILogger<O
         logger.LogInformation("Outbox drained {Count} message(s)", batch.Count);
     }
 }
+

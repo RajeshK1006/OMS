@@ -1,16 +1,20 @@
-using BuildingBlocks.Application.Messaging;
-using BuildingBlocks.Application.Pipeline;
 using BuildingBlocks.Infrastructure.Outbox;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Ordering.Application.Abstractions;
-using Ordering.Application.Orders;
 using Ordering.Infrastructure.Messaging;
 using Ordering.Infrastructure.Persistence;
 using Ordering.Infrastructure.Persistence.Repositories;
 
 namespace Ordering.Infrastructure;
+
+/// <summary>
+/// Single composition point for Ordering infrastructure:
+/// DbContext, repositories, outbox. Application-layer registrations
+/// (handlers, validators, mapping) live in
+/// Ordering.Application/Orders/DependencyInjection.cs.
+/// </summary>
 
 public static class DependencyInjection
 {
@@ -25,8 +29,6 @@ public static class DependencyInjection
             o.AddInterceptors(sp.GetRequiredService<DomainEventsToOutboxInterceptor>());
         });
         services.AddScoped<IOrderRepository, OrderRepository>();
-        services.AddScoped<ICommandHandler<PlaceOrderCommand, Guid>, PlaceOrderHandler>();
-        services.AddScoped<IValidator<PlaceOrderCommand>, PlaceOrderValidator>();
         services.AddHostedService<OrderingOutboxProcessor>();
         return services;
     }

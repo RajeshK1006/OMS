@@ -4,7 +4,7 @@ using Ordering.Domain.Orders;
 
 namespace Ordering.Infrastructure.Persistence.Configurations;
 
-public sealed class OrderConfiguration : IEntityTypeConfiguration<Order>
+public class OrderConfiguration : IEntityTypeConfiguration<Order>
 {
     public void Configure(EntityTypeBuilder<Order> b)
     {
@@ -21,3 +21,4 @@ public sealed class OrderConfiguration : IEntityTypeConfiguration<Order>
         b.Ignore(o => o.Total);
     }
 }
+

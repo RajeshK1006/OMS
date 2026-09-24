@@ -1,5 +1,6 @@
 using BuildingBlocks.Web.Extensions;
 using Microsoft.EntityFrameworkCore;
+using Ordering.Application.Orders;
 using Ordering.Infrastructure;
 using Ordering.Infrastructure.Persistence;
 
@@ -9,8 +10,9 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddOpenApi();
-builder.Services.AddBuildingBlocksWeb(); // dispatcher + pipeline behaviors + event bus
-builder.Services.AddOrderingInfrastructure(builder.Configuration);
+builder.Services.AddBuildingBlocksWeb(); // dispatchers + pipeline behaviors + event bus
+builder.Services.AddOrderingApplication(); // commands/queries, handlers, validators, IMapper
+builder.Services.AddOrderingInfrastructure(builder.Configuration); // DbContext, repositories, outbox
 // To use RabbitMQ instead of in-memory: builder.Services.AddRabbitMqBus(o => o.HostName = "localhost");
 
 var app = builder.Build();

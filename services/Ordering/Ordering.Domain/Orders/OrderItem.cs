@@ -1,6 +1,6 @@
 namespace Ordering.Domain.Orders;
 
-public sealed class OrderItem
+public class OrderItem
 {
     private OrderItem() { } // EF
 
@@ -21,3 +21,4 @@ public sealed class OrderItem
     public decimal UnitPrice { get; private set; }
     public decimal LineTotal => Quantity * UnitPrice;
 }
+

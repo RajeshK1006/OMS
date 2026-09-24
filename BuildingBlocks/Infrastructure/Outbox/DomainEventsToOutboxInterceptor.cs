@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Diagnostics;
 
 namespace BuildingBlocks.Infrastructure.Outbox;
 
-public sealed class DomainEventsToOutboxInterceptor : SaveChangesInterceptor
+public class DomainEventsToOutboxInterceptor : SaveChangesInterceptor
 {
     public override ValueTask<int> SavedChangesAsync(SaveChangesCompletedEventData eventData, int result, CancellationToken ct = default)
     {
@@ -49,3 +49,4 @@ public sealed class DomainEventsToOutboxInterceptor : SaveChangesInterceptor
         ctx.Set<OutboxMessage>().AddRange(messages);
     }
 }
+

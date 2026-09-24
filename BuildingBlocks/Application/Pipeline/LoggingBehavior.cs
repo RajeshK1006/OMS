@@ -4,7 +4,7 @@ using Microsoft.Extensions.Logging;
 
 namespace BuildingBlocks.Application.Pipeline;
 
-public sealed class LoggingBehavior<TCommand, TResponse>(ILogger<LoggingBehavior<TCommand, TResponse>> logger) : IPipelineBehavior<TCommand, TResponse>
+public class LoggingBehavior<TCommand, TResponse>(ILogger<LoggingBehavior<TCommand, TResponse>> logger) : IPipelineBehavior<TCommand, TResponse>
     where TCommand : ICommand<TResponse>
 {
     public async Task<TResponse> HandleAsync(TCommand command, RequestHandlerDelegate<TResponse> next, CancellationToken ct = default)
@@ -15,3 +15,4 @@ public sealed class LoggingBehavior<TCommand, TResponse>(ILogger<LoggingBehavior
         return response;
     }
 }
+

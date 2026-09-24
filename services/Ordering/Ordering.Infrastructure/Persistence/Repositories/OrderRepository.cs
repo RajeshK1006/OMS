@@ -5,7 +5,7 @@ using Ordering.Infrastructure.Persistence;
 
 namespace Ordering.Infrastructure.Persistence.Repositories;
 
-public sealed class OrderRepository(OrderingDbContext db) : IOrderRepository
+public class OrderRepository(OrderingDbContext db) : IOrderRepository
 {
     public async Task AddAsync(Order order, CancellationToken ct = default)
         => await db.Orders.AddAsync(order, ct);
@@ -21,3 +21,4 @@ public sealed class OrderRepository(OrderingDbContext db) : IOrderRepository
     public Task SaveChangesAsync(CancellationToken ct = default)
         => db.SaveChangesAsync(ct);
 }
+

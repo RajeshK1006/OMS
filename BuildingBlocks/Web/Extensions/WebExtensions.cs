@@ -16,6 +16,9 @@ public static class WebExtensions
         services.AddScoped(typeof(IPipelineBehavior<,>), typeof(LoggingBehavior<,>));
         services.AddScoped(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
         services.AddScoped<ICommandDispatcher, CommandDispatcher>();
+        services.AddScoped(typeof(IQueryPipelineBehavior<,>), typeof(QueryLoggingBehavior<,>));
+        services.AddScoped(typeof(IQueryPipelineBehavior<,>), typeof(QueryValidationBehavior<,>));
+        services.AddScoped<IQueryDispatcher, QueryDispatcher>();
         services.AddSingleton<IEventBus, InMemoryEventBus>();
         return services;
     }

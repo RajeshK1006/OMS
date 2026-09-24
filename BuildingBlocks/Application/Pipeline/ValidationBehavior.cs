@@ -8,7 +8,7 @@ public interface IValidator<in TCommand>
     Task<IReadOnlyList<string>> ValidateAsync(TCommand command, CancellationToken ct = default);
 }
 
-public sealed class ValidationBehavior<TCommand, TResponse>(IEnumerable<IValidator<TCommand>> validators) : IPipelineBehavior<TCommand, TResponse>
+public class ValidationBehavior<TCommand, TResponse>(IEnumerable<IValidator<TCommand>> validators) : IPipelineBehavior<TCommand, TResponse>
     where TCommand : ICommand<TResponse>
 {
     public async Task<TResponse> HandleAsync(TCommand command, RequestHandlerDelegate<TResponse> next, CancellationToken ct = default)
@@ -22,7 +22,8 @@ public sealed class ValidationBehavior<TCommand, TResponse>(IEnumerable<IValidat
     }
 }
 
-public sealed class ValidationException(IReadOnlyList<string> errors) : Exception("Validation failed: " + string.Join("; ", errors))
+public class ValidationException(IReadOnlyList<string> errors) : Exception("Validation failed: " + string.Join("; ", errors))
 {
     public IReadOnlyList<string> Errors { get; } = errors;
 }
+
